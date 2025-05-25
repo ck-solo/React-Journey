@@ -63,6 +63,19 @@ In ReactRouting file we use /:name for dynamically call the route like the synta
   but the above all code only show data in url not on page and after that we should use useparams() import the useparams and store it into a varible and then call it on the place of real name like on the place of title
   {product 1} {pramas.name}
 
-  this all work open the child on another page.
+  this all work open the child on another page and if we want to open on the same page you should make the folder inside the route like the syntax below
+   <Route path="/service" element={<Service />}>
+        <Route path="/service/detail" element={<ServiceDetail />} />  
+    </Route>
+By using this code you can clearly look into the url it is working but it not displaying the servicedetails only url update or change to detail and in the parent first use hr then use outlet then your child is starting visbile on the same page
+<hr className='my-10' />
+  <Outlet/>
+
+We can also use many more button in the same route to open like in service details and service updates 
+as the below syntax we can navigate it to anywhere by just writing the route location like "/about" in navigate take us to about and as many more. 
+ <button onClick={()=> navigate(-1)}  className="text-lg p-2 font-bold bg-blue-700 rounded text-black">Go Back</button> 
+
+
+
 
 
