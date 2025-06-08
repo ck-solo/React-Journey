@@ -38,19 +38,19 @@ const Create = () => {
 
 
         <textarea  className='border-b outline-0   block mt-5'
-        {...register('description')} 
+        {...register('desc')} 
         placeholder='Enter the Description here'
          >
          </textarea> 
 
         <textarea  className='border-b outline-0  block mt-5'
-        {...register('Ingredients')} 
+        {...register('ing')} 
         placeholder='Write the Ingredients here...'
          >
          </textarea>
 
         <select  className='border-b outline-0  block mt-5 bg-gray-700'
-        {...register('Category')}  
+        {...register('Cate')}  
          >
             <option value="breakfast">Breakfast</option>
             <option value="lunch">Lunch</option>

@@ -1,18 +1,17 @@
 import React, { useContext } from 'react' 
 import { recipecontext } from '../context/RecipeContext'
+import RecipeCard from '../components/RecipeCard';
 
 
-const Recipe = () => { 
+const Recipes = () => { 
 const {  data }=  useContext(recipecontext);
 
 const renderrecipes = data.map((recipe) => (
-  <div key={recipe.id}>
-    <h1>{recipe.title}</h1>
-  </div>
+  <RecipeCard key={recipe.id} recipe={recipe} />
 ))
   return (
     <div>{renderrecipes}</div>
   )
 }
 
-export default Recipe
+export default Recipes
