@@ -2,6 +2,8 @@ import { nanoid } from 'nanoid'
 import React, { useContext } from 'react'
 import { useForm } from 'react-hook-form'
 import { recipecontext } from '../context/RecipeContext'
+import { toast } from 'react-toastify'
+import { Navigate } from 'react-router-dom'
 
 const Create = () => {
     const{data,setdata} = useContext(recipecontext)
@@ -11,8 +13,10 @@ const Create = () => {
         recipe.id = nanoid()  
        const newData = [...data, recipe];
        setdata(newData)
-
+       toast.success("New Recipe Created!")
         reset()
+
+        navigate("/recipes")
     }
   return (
     
