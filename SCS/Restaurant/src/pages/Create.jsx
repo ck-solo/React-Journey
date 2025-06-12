@@ -3,9 +3,10 @@ import React, { useContext } from 'react'
 import { useForm } from 'react-hook-form'
 import { recipecontext } from '../context/RecipeContext'
 import { toast } from 'react-toastify'
-import { Navigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const Create = () => {
+  const navigate = useNavigate()
     const{data,setdata} = useContext(recipecontext)
     const {register, handleSubmit , reset }= useForm() 
 
@@ -58,6 +59,7 @@ const Create = () => {
          >
             <option value="breakfast">Breakfast</option>
             <option value="lunch">Lunch</option>
+            <option value="supper">Supper</option>
             <option value="dinner">Dinner</option>
          </select> 
 

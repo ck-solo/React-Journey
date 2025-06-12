@@ -7,8 +7,8 @@ const RecipeCard = (props) => {
 
   return (
 
-    <Link to={`/recipes/details/${id}`} className='block w-[20vw] rounded overflow-hidden'>
-    <img className='object-cover w-full h-[20vh]' src={image} alt="" />
+    <Link to={`/recipe/details/${id}`} className=' duration-150 hover:scale-105 mb-2 ml-4 block w-[20vw] rounded overflow-hidden'>
+    <img className=' object-cover w-full h-[20vh]' src={image} alt="" />
     <h1 className='p-2 font-black'>{title}</h1>
     <small className='p-2 '>{chef}</small> 
     <p className='p-2 text-sm'>{desc.slice(0, 100)}...

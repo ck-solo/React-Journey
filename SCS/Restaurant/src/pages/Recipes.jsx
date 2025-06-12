@@ -10,7 +10,7 @@ const renderrecipes = data.map((recipe) => (
   <RecipeCard key={recipe.id} recipe={recipe} />
 ))
   return (
-    <div>{renderrecipes}</div>
+    <div className='flex flex-wrap  '>{data.length > 0 ? renderrecipes : "No recipes found!"}</div>
   )
 }
 
