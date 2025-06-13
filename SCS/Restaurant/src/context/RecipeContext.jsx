@@ -14,8 +14,7 @@ const RecipeContext = (props) => {
         "Olive oil",
         "Salt and pepper to taste"
       ],
-      desc: [
-        "Preheat the oven to 475°F (245°C).",
+      desc: [ 
         "Roll out the pizza dough and spread tomato sauce evenly.",
         "Top with slices of fresh mozzarella and fresh basil leaves.",
          
