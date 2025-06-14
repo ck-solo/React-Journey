@@ -8,7 +8,7 @@ const Home = () => {
       console.log(data);
     } catch (error) {
       console.log(error);
-    }
+    } 
   };
   return (
     <>
