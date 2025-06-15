@@ -50,14 +50,17 @@ const SingleRecipe = () => {
     localStorage.setItem("fav",JSON.stringify(favrate))
   };
   
-  const unFavHandler = () => {}
-    console.log(favrate)
-    console.log(favrate.find((f) => f.id == recipe?.id))
+  const unFavHandler = () => {
+    const filterFav = favrate.filter((f) => f.id != recipe?.id)
+    localStorage.setItem("fav",JSON.stringify(favrate))
+
+
+  } 
 
   return recipe ? (
     <div className="w-full flex ">
       <div className="relative left w-1/2 p-2">
-        {recipe in favrate ? (
+        {favrate.find((f) => f.id == recipe?.id) ? (
           <i
             onClick={unFavHandler}
             className="absolute text-4xl right-[15%]  text-red-400  ri-heart-fill"
