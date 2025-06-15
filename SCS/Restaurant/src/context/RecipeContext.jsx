@@ -1,31 +1,17 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useEffect, useState } from 'react'
 
 export const recipecontext =    createContext(null)
 const RecipeContext = (props) => {
-    const [data, setdata] = useState([
-        {
-      id: 1,
-      title: "Classic Margherita Pizza",
-      ing: [
-        "Pizza dough",
-        "Tomato sauce",
-        "Fresh mozzarella cheese",
-        "Fresh basil leaves",
-        "Olive oil",
-        "Salt and pepper to taste"
-      ],
-      desc: [ 
-        "Roll out the pizza dough and spread tomato sauce evenly.",
-        "Top with slices of fresh mozzarella and fresh basil leaves.",
-         
-      ],
-        
-      image: "https://cdn.dummyjson.com/recipe-images/1.webp",
-      chef:"Pankaj Chamoli",
-      category:"Lunch"
-    },
-    ])
-    console.log(data)
+    const [data, setdata] = useState(()=>{
+      const localData = localStorage.getItem('recipe')
+      return localData ? JSON.parse(localData) : []
+    }) 
+
+    useEffect(() => {
+    localStorage.setItem("recipe", JSON.stringify(data))
+  }, [data])
+
+
   return (
     <recipecontext.Provider value={{data, setdata}}>{props.children}</recipecontext.Provider>
   )

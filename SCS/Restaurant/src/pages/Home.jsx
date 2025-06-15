@@ -1,5 +1,5 @@
 import axios from "../utils/axios";
-import React from "react";
+import React, { useEffect } from "react";
 
 const Home = () => {
   const getproduct = async () => {
@@ -10,6 +10,15 @@ const Home = () => {
       console.log(error);
     } 
   };
+
+  useEffect(()=>{
+    console.log("Home.jsx mounted")
+    getproduct()
+
+    return () =>{
+      console.log("Home.jsx in unmounted.")
+    }
+  })
   return (
     <>
       <div>Home</div>

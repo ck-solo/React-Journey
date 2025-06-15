@@ -14,22 +14,22 @@ const Create = () => {
         recipe.id = nanoid()  
        const newData = [...data, recipe];
        setdata(newData)
+     localStorage.setItem("recipe",JSON.stringify(newData))
        toast.success("New Recipe Created!")
         reset()
-
         navigate("/recipes")
     }
   return (
     
-    <form className='text-sm' onSubmit={handleSubmit(SubmitHandler)}>
-        <input  className='border-b outline-0 p-2 block'
+    <form className='text-sm' onSubmit={handleSubmit(SubmitHandler)}>  
+        <input  className='border-bmoutline-0 p-2  block'
         {...register('image')}
         type="url"
         placeholder='Enter the Image URL'
          />
          <small className='text-red-400 '>File not empty</small>
 
-        <input  className='border-b outline-0 p-2 block mt-5'
+        <input  className='border-b outline-0 p-2  block mt-5'
         {...register('title')}
         type="text"
         placeholder='Enter the Title'

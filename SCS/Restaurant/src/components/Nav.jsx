@@ -16,6 +16,9 @@ const Nav = () => {
         <NavLink className={(e)=> e.isActive ? "text-red-700" : ""} to='/create-recipe'>
             Create Recipe
         </NavLink>
+        <NavLink className={(e)=> e.isActive ? "text-red-700" : ""} to='/fav'>
+            Favourite
+        </NavLink>
     </div>
   )
 }
