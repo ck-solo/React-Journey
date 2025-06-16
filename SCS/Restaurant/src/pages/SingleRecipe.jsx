@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { recipecontext } from "../context/RecipeContext";
 import { useForm } from "react-hook-form";
@@ -41,21 +41,28 @@ const SingleRecipe = () => {
     navigate("/recipe");
   };
 
-  useEffect(() => {}, []); // by using [] it stop the rerendering(delete and create)
-
-  const favrate = JSON.parse(localStorage.getItem("fav")) || [];
+  
+  
+  const [favrate, setfavrate] = useState(
+    JSON.parse(localStorage.getItem("fav")) || []
+  );
+  
+  
 
   const favHandler = () => {
-    favrate.push(recipe)
-    localStorage.setItem("fav",JSON.stringify(favrate))
+    let copyfav = [...favrate];
+    copyfav.push(recipe) 
+    setfavrate(copyfav)
+    localStorage.setItem("fav", JSON.stringify(copyfav))
   };
+
   
   const unFavHandler = () => {
     const filterFav = favrate.filter((f) => f.id != recipe?.id)
-    localStorage.setItem("fav",JSON.stringify(favrate))
-
-
+    setfavrate(filterFav)
+    localStorage.setItem("fav", JSON.stringify(filterFav))
   } 
+ 
 
   return recipe ? (
     <div className="w-full flex ">
