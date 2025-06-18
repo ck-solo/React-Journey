@@ -10,6 +10,7 @@ const renderrecipes = favrate.map((recipe) => (
     <div className='flex flex-wrap  '>{favrate.length > 0 ? renderrecipes : "No Favrate found!"}</div>
   )
 
+  
 }
 
 export default Fav
