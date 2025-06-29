@@ -8,6 +8,7 @@ the syntax to write <Routes>
 <Route path="/" element={<Home />} />
 </Routes>
 
+
 3. If making navbar don't use <a> tag because it refresh the page so instead of <a> use <Link> before using import it and the syntax to write 
 <Link to="/">Home<Link>
 
