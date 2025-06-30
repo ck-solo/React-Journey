@@ -4,7 +4,7 @@ import { createContext, useState } from "react"
 export const todocontext = createContext(null)
 const Wrapper = (props) => {
     const [todos, settodos] = useState([
-    { id: 1, title: "First Todos", isCompleted: false },
+    { id: 1, title: "First Todos", isCompleted: false  },
   ]);
 
   return (
