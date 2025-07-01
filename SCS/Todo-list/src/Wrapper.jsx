@@ -8,7 +8,7 @@ const Wrapper = (props) => {
   ]);
 
   return (
-   <todocontext.Provider value={[todos, settodos]}>
+   <todocontext.Provider value={[todos , settodos]}>
     {props.children}
    </todocontext.Provider>
   )
