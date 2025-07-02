@@ -5,6 +5,7 @@ Basic Routing
 
 2. then after in app.jsx import Routes and Route and use them by writing all the components inside the routes 
 the syntax to write <Routes>
+
 <Route path="/" element={<Home />} />
 </Routes>
 
