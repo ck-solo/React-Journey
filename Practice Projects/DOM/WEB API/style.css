@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#box{
+    background-color: wheat;
+    width: 500px;
+    height: 200px; 
+    border-radius: 20px;
+    gap: 10px;
+    padding: 5px;
+
+}
+
+#progress{ 
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+#fill{
+     border-radius: 20px;
+    background-color: rgb(37, 238, 37);
+    width: 0%;
+    height: 100%; 
+
+}
+#percent{ 
+    font-size: 20px; 
+    display: flex;
+    justify-content: end;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#letter{ 
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+#letter h4{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#letter button{ 
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(24, 109, 3);
+    font-weight: 600;
+    color: #fff;
+}
+button:active{
+    scale: 0.9;
+}
+
+.btns{
+    display: flex;
+    align-items: center;
+    flex-direction: column ;
+    justify-content: center;
+    gap: 20px;
+} 
+ 

@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  width: 100%;
+  perspective: 1000px;
+}
+
+#container {
+  height: 100vh;
+
+  background-image: url(/img2.jpg);
+  background-size: cover; 
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 50px;
+  font-family: "gilroy";
+  font-weight: 700;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 370px;
+  width: 360px;
+  background-color: transparent !important;
+  border-radius: 5px;
+  transition: transform 0.5s ease-in-out;  
+  box-shadow: 0px 0px 60px 10px rgb(196, 192, 192);
+}
+
+form:hover {
+  transform: scale(1.1);
+}
+
+label {
+  font-weight: 600;
+  font-size: 15px;
+  display: block;
+  font-family: "gilroy";
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: color 0.5s, transform 0.5s;
+}
+
+input:focus,
+input:hover,
+input::after {
+  transform: scale(1.1);
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: color 0.5s, transform 0.5s;
+}
+
+textarea:focus,
+textarea:hover,
+textarea::after {
+  transform: scale(1.1);
+}
+
+button {
+  background-color: rgb(60, 184, 233);
+  border: 2px solid blue;
+  font-size: 20px;
+  font-weight: 500;
+  border: 2px solid black;
+  font-family: "gilroy";
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: color 0.5s, transform 0.5s;
+}
+
+button:focus,
+button:hover,
+button::after {
+  transform: scale(1.1);
+  font-weight: 600;
+  font-family: 'Gilroy';
+  background-color: rgb(13, 166, 226);
+}

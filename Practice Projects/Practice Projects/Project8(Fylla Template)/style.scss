@@ -1,0 +1,715 @@
+@mixin lightweight {
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+@mixin lineheight {
+  border: 1px solid black;
+  width: 100%;
+  height: 1px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ 
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  padding: 1rem;
+}
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+main {
+  padding: 2rem; 
+  width: 100%;
+  border: 1px solid #000;
+}
+
+#navbar{
+  width: 100%;
+  display: flex; 
+  justify-content: space-between; 
+  gap: 0.5rem;
+
+  .navtop{
+    width: 40%;
+      display: flex;  
+      align-items: center;
+
+      svg{
+        width: 20px;
+        height: 20px;
+      }
+       
+      p{
+        align-items: center;
+        margin: 0.6rem;
+        font-weight: 500; 
+        font-size: 1rem;
+      }
+       
+  }
+
+  #navbottom{
+    width: 80%;
+    display: flex; 
+    justify-content: space-between;
+
+    .tags{
+      display: flex;
+      align-items: center; 
+
+      a:nth-child(3){
+        display: none;
+      }
+      a{ 
+        text-decoration: none;
+        color: #000;
+        margin-left: 0.7rem;
+        font-size: 1rem;
+      }
+      
+    }
+    .navbtn{
+      display: none;
+       
+    }
+  }
+}
+
+
+.line0{
+  margin-top: 1rem;
+  border: 1px solid black;
+  width: 100%;
+  height: 1px;
+}
+.view-1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+
+  p {
+    @include lightweight;
+  }
+  h1 {
+    font-weight: 500;
+    font-size: 4rem;
+    width: 40%;
+  }
+  img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1.2rem;
+  }
+}
+
+.view-2 {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .right {
+    display: flex;
+    flex-direction: column;
+
+    p {
+      @include lightweight;
+    }
+    h3 {
+      font-size: 3rem;
+      font-weight: 500;
+      width: 90%;
+    }
+    button {
+      margin-top: 2rem;
+      padding: 1rem;
+      border: 0.7rem;
+      border-radius: 0.5rem;
+      background-color: black;
+      color: white;
+      width: fit-content;
+    }
+  }
+
+  .line {
+    border: 1px solid black;
+    width: 100%;
+    height: 1px;
+  }
+  .left {
+    display: flex;
+    flex-direction: column;
+    .elem1 {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding-bottom: 1rem;
+
+      svg {
+        margin-top: 1rem;
+        width: 4rem;
+        aspect-ratio: 1/1;
+      }
+      h2 {
+        font-size: 2rem;
+        font-weight: 400;
+      }
+      p {
+        @include lightweight();
+      }
+      .line {
+        border: 1px solid black;
+        width: 100%;
+        height: 1px;
+      }
+    }
+  }
+}
+
+.view-3 {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .right {
+    display: flex;
+    flex-direction: column;
+
+    p {
+      @include lightweight;
+      font-size: 1.2rem;
+      width: 90%;
+    }
+    h3 {
+      font-size: 3rem;
+      font-weight: 400;
+      width: 60%;
+    }
+  }
+
+  .line {
+    border: 1px solid black;
+    width: 100%;
+    height: 1px;
+  }
+  .left {
+    display: flex;
+    flex-direction: row;
+    .elem1 {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding-bottom: 1rem;
+
+      video {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 1.2rem;
+        margin-top: 1rem;
+      }
+    }
+    h2 {
+      font-size: 2rem;
+      font-weight: 400;
+    }
+    p {
+      @include lightweight();
+    }
+  }
+  .left2 {
+    display: flex;
+    flex-direction: row;
+
+    .elem1 {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding-bottom: 1rem;
+
+      video {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 1.2rem;
+        margin-top: 1rem;
+      }
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 400;
+    }
+    p {
+      @include lightweight();
+    }
+  }
+
+  .line {
+    border: 1px solid black;
+    width: 100%;
+    height: 1px;
+  }
+}
+
+.line3 {
+  width: 100%;
+  height: 1px;
+  border: 1px solid black;
+}
+
+.view-4 {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+    p {
+      margin-top: 1rem;
+      @include lightweight;
+    }
+
+    h3 {
+      font-size: 3rem;
+      font-weight: 500;
+      width: 90%;
+    }
+  }
+
+  .line4 {
+    display: none;
+  }
+  .left {
+    display: flex;
+    flex-direction: column;
+
+    p {
+      @include lightweight();
+      font-size: 1.2rem;
+    }
+    button {
+      margin-top: 2rem;
+      padding: 1rem;
+      border: 0.7rem;
+      border-radius: 0.5rem;
+      background-color: rgb(90, 88, 88);
+      color: white;
+      width: fit-content;
+    }
+    button:hover{
+      background-color: #000;
+    }
+  }
+
+}
+
+.line4 {
+  border: 1px solid black;
+  width: 100%;
+  height: 1px;
+}
+
+.view-5 {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .line {
+    border: 1px solid black;
+    width: 100%;
+    height: 1px;
+  }
+  .fright {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-between;
+
+    .fright-1 {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+
+      h3 {
+        align-items: center;
+        margin: 0.6rem;
+        font-weight: 500;
+      }
+    }
+
+    .f-text {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .btn {
+      margin-top: 4rem;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      gap: 1rem;
+
+
+      .circle {
+        padding: 0.5rem;
+        border-radius: 3rem;
+        color: #000;
+        border: 1px solid #000;
+        background-color: #ffffff;
+      }
+      .circle:hover{
+        background-color: #000;
+        color: #fff;
+      }
+    }
+  }
+
+  .line5 {
+    border: 1px solid black;
+    width: 100%;
+    height: 1px;
+  }
+
+  .fleft {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 400;
+    }
+    .tags {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      a:hover{
+        color: #000;
+        text-decoration: underline;
+      }
+    }
+    button {
+      margin-top: 2rem;
+      padding: 1rem;
+      border: 0.7rem;
+      border-radius: 0.5rem;
+      background-color: rgb(61, 59, 59);
+      color: white;
+      width: fit-content;
+    }
+    button:hover{
+      background-color: #000;
+      color: #fff;
+    }
+
+    .line5 {
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+footer{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center ; 
+   
+
+  .line6{
+
+    border: 1px  burlywood;
+    width: 100%;
+    height: 1px;
+  }
+  h6{
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0.6rem;
+    
+    span{
+      text-decoration:underline;
+      word-spacing: 0.4rem;
+      opacity: 0.7;
+    }
+  }
+  p{ 
+    margin-left: 1.5rem; 
+    word-spacing: 1rem;
+
+  }
+
+}
+  
+
+
+@media (min-width: 1020px) {
+  main {
+    padding: 2rem;
+
+  }
+
+  #navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; 
+
+    .navtop{
+      width: 20%; 
+    
+      svg{
+        width: 50px;
+        height: 50px;
+      }
+      p{
+        font-size: 3rem;
+      }
+
+    }
+    #navbottom{
+      width: 80%;
+      display: flex;
+      justify-content: space-evenly;
+      gap: 20rem;
+
+      .tags{
+        width: 40%;
+        display: flex;
+        gap: 2rem;  
+        justify-content: space-between;
+
+        a:nth-child(3){
+          display: inline-block;
+        }
+        a{
+          font-size: 2rem;
+        }
+        a:hover{
+          color: black;
+          text-decoration: underline;
+        }
+      }
+        .navbtn{
+          gap: 0.6rem; 
+          display: flex;
+          align-items: center;
+
+        
+        }
+        button{
+          display: inline;
+          padding: 1rem;
+          border: 0.7rem;
+          border-radius: 0.5rem;
+          background-color: rgb(48, 47, 47);
+          color: white;
+          width: fit-content;
+
+        }
+
+         button:hover{
+          background-color: #000;
+          color: #fff;
+         }
+        .circles{
+          padding: 0.5rem;
+          border-radius: 3rem;
+          color: #000;
+          border: 1px solid #000;
+          background-color: #ffffff;
+        }
+        .circles:hover{
+          background-color: #000;
+          color: #fff;
+        }
+
+    }
+  }
+
+  .view-1 {
+    h1 {
+      width: 100%;
+      font-size: 6rem;
+    }
+  }
+
+  .view-2 {
+    flex-direction: row;
+
+    .right {
+      width: 80%;
+      justify-content: space-between;
+
+      h3 {
+        font-size: 5rem;
+      }
+    }
+    .line {
+      height: initial;
+      width: 1px;
+    }
+
+    .left {
+      width: 40%;
+
+      .line {
+        width: initial;
+        height: 1px;
+        align-self: stretch;
+      }
+    }
+  }
+  .line3 {
+    margin-top: 2rem;
+    border: 1px solid black;
+    width: 100%;
+    height: 1px;
+  }
+
+  .view-3 {
+    height: 100%;
+    flex-direction: row;
+    position: relative;
+
+    .right {
+      width: 50%;
+      height: 100%;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+
+      h3 {
+        font-size: 5rem;
+      }
+    }
+    .line {
+      height: initial;
+      width: 1px;
+    }
+
+    .left {
+      width: 50%;
+
+      .line {
+        width: initial;
+        height: 1px;
+        align-self: stretch;
+      }
+    }
+    .left2 {
+      width: 50%;
+    }
+  }
+
+  .line2 {
+    margin-top: 2rem;
+    border: 1px solid black;
+    width: 100%;
+    height: 1px;
+  }
+
+  .view-4 {
+    flex-direction: row;
+    gap: 4rem;
+
+    .lastline {
+      height: initial;
+      width: 1px;
+      background-color: #000;
+      border: 1px solid black;
+    }
+
+    .right {
+      width: 70%;
+      justify-content: space-between;
+      flex-direction: column-reverse;
+
+      h3 {
+        font-size: 4rem;
+        margin-bottom: 7rem;
+      }
+    }
+
+    .left {
+      width: 30%;
+      justify-content: space-between;
+    }
+  }
+
+  .view-5 {
+    flex-direction: row;
+
+    .line5 {
+      height: initial;
+      width: 1px;
+      background-color: #000;
+      border: 1px solid black;
+    }
+    .fright {
+      width: 30%;
+    }
+    .fleft {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .fleft-1 {
+        .line5 {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .line6{
+    width: 100%;
+    height: 1px;
+    border: 1px solid #000;
+    margin-top: 5rem;     
+  }
+  footer{
+    margin-top: 2rem;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+}
+
