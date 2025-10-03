@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Map = () => {
+    
     const profile =[
         {
             name: 'Shriyasmh',
@@ -18,14 +19,16 @@ const Map = () => {
         }
         
     ]
-
+    
     const updateProfile = profile.map((profile, index)=>{
-       return(
+        return(<>
+         
         <li key={index}>
             <span>{profile.name} </span> <br />
             <span>{profile.age} </span>
             <span>{profile.gender} </span>
         </li>
+       </>
         );
     })
   return (
