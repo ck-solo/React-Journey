@@ -5,7 +5,7 @@ import Map from './Map.jsx'
 import Change from './Change.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  <>
     {/* <App /> */} 
 
 
@@ -15,5 +15,5 @@ createRoot(document.getElementById('root')).render(
     {/* ----------------------------- */}
     <h1>Change Name</h1>
     <Change />
-  </StrictMode>,
+  </>,
 )
