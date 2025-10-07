@@ -1,34 +1,36 @@
- import { useState } from "react"
+import { useState } from "react";
 
-const Write = (props) => { 
-  console.log(props)
-const [fullname, setfullname] = useState("")
-  const [age, setage] = useState(18)
+ const Write = (props) => {
 
- const SubmitHandler=(e)=>{
+   const [Fullname, setFullname] = useState("");
+  const [age, setage] = useState("18");
+
+  
+  const SubmitHandler = (e) =>{
     e.preventDefault()
-    const newuser = { fullname , age};
-    console.log(newuser)
+    const newuser = {Fullname, age}
+    console.log(newuser)  // api, database, backend
   }
+   return (
+     <div> <h1>Register User</h1>
+      <form style={{ fontSize: "50px" }} onSubmit={SubmitHandler}>
+        <input style={{ margin: "10px", fontSize: "40px" }}
+          onChange={(e) => setFullname(e.target.value)}
+          value={Fullname}
+          type="text"
+          placeholder="Name"
+        />
 
-  return (
-    <div>
-       <h1>Register User</h1>
-      <form onSubmit={SubmitHandler}>
-        <input
-        onChange={(e)=>setfullname(e.target.value)}
-        value={fullname}
-         type="text"
-         placeholder="Full Name" />
-        <input 
-        onChange={(e)=>setage(e.target.value)}
-        value={age}
-        type="text"
-       placeholder="Age" />
-        <button>Submit</button>
-      </form>
-    </div>
-  )
-}
+        <input style={{ margin: "10px", fontSize: "40px" }}
+          onChange={(e) => setage(e.target.value)}
+          value={age}
+          type="number"
+          placeholder="Age"
+        />
 
-export default Write
+        <button style={{ margin: "10px", fontSize: "40px" }}> Submit</button>
+      </form></div>
+   )
+ }
+ 
+ export default Write
