@@ -4,6 +4,7 @@ import App from './App.jsx'
 import Map from './Map.jsx'
 import Change from './Change.jsx'
 import Form from './Form.jsx'
+import Registration from './Registration.jsx'
 
 createRoot(document.getElementById('root')).render(
   <>
@@ -20,6 +21,10 @@ createRoot(document.getElementById('root')).render(
 
     {/* ------------------------------ */}
     
-    <Form />
+    {/* <Form /> */}
+
+    {/* ----------------------------- */}
+
+    <Registration />
   </>,
 )
