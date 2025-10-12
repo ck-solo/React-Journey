@@ -17,9 +17,10 @@ const Write = (props) => {
       const copytodo = [...todos]
       copytodo.push(data)
       settodos(copytodo)
-        
-        reset()
-      }
+      
+      reset()
+    }
+    console.log(errors)
     
      
 
@@ -28,10 +29,12 @@ const Write = (props) => {
       <h1 className="m-20 text-6xl">Set <span className='text-red-800'>Reminders</span> for tasks</h1>
       <form  onSubmit={handleSubmit(SubmitHandler)}>
         <input className="w-[80%] border-b-2 text-4xl "
-           {...register('title', {required: true})}
+           {...register('title', {required: "title can not be empty"})}
           type="text"
           placeholder="Enter the title"
         />
+        <br />
+        <small className="text-3xl text-red-500">{errors.title && "Title can not be empty"}</small>
         <br />
         <br />
         <button className="p-3 m-5 text-white text-3xl border-blue-200 border-2 rounded-md">Create Todo</button>
