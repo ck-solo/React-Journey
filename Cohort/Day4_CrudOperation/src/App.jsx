@@ -18,6 +18,7 @@ const App = () => {
     <div className="flex border-2 border-white rounded-md m-5">
       <Write todos={todos} settodos={settodos} />
       <Read todos={todos} settodos={settodos} />
+      
     </div>
   );
 };

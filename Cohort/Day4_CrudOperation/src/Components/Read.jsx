@@ -1,5 +1,6 @@
 import React from "react";
 import style from "../style.module.css";
+import { toast } from "react-toastify";
 
  
 const Read = (props) => {
@@ -10,6 +11,8 @@ const Read = (props) => {
    const DeleteHandler= (id) =>{
         const filtertodo = todos.filter((todos) => todos.id !== id)
         settodos(filtertodo)
+        toast.error("Todo deleted ")
+
     
       }
 
@@ -21,6 +24,7 @@ const Read = (props) => {
       </li>
     );
   });
+  
 
   return (
     <div className="w-[50%]  p-20">

@@ -2,6 +2,7 @@ import React from "react";
  
 import { nanoid } from 'nanoid'
 import {useForm} from 'react-hook-form'
+import { toast, ToastContainer } from 'react-toastify';
 
 const Write = (props) => {
     const todos = props.todos;
@@ -17,10 +18,11 @@ const Write = (props) => {
       const copytodo = [...todos]
       copytodo.push(data)
       settodos(copytodo)
-      
       reset()
+      toast.success("Todo added successfully")
     }
     console.log(errors)
+    
     
      
 
