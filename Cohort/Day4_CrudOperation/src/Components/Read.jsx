@@ -4,11 +4,8 @@ import { toast } from "react-toastify";
 import { createtodo } from "../Wrapper";
 
  
-const Read = (props) => {
-  const todos = props.todos;
-  const settodos = props.settodos;
-  const state = useContext(createtodo);
-  console.log(state);
+const Read = () => {
+  const [todos, settodos] = useContext(createtodo);
 
 
    const DeleteHandler= (id) =>{
