@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import style from "../style.module.css";
 import { toast } from "react-toastify";
+import { createtodo } from "../Wrapper";
 
  
 const Read = (props) => {
   const todos = props.todos;
   const settodos = props.settodos;
+  const state = useContext(createtodo);
+  console.log(state);
 
 
    const DeleteHandler= (id) =>{

@@ -3,10 +3,11 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import { ToastContainer } from 'react-toastify'
+import Wrapper from './Wrapper.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-    <ToastContainer autoClose={1500} position="top-center" theme="dark" />
-  </StrictMode>,
+<Wrapper>
+  <App />
+  <ToastContainer />
+</Wrapper>
 )
