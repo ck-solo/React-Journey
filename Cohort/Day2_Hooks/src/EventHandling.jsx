@@ -1,24 +1,25 @@
-// Day 71 Hooks work
-const Event = () => {
+import React from "react";
 
-  // non parametrized function (not passign arguments)
-  const handleClick =()=>{
-    alert("Clicked")
-  }
-  // parametrized function(Pass arguments)
+const EventHandling = () => {
+  const handleClick = () => {
+    alert("Clicked");
+  };
 
-  const handlePramClick =(msg)=>{
-    alert(msg)
-  }
+   
 
   return (
-    <>
-    <div>App</div>
-    <button onClick={handleClick}>Click me</button>
-    <button onClick={()=> handlePramClick("I am param function")}>Click (param)</button>
-    </>
-    
-  )
-}
+    <div>
+      <h1>Event Handling</h1>
+      <button onClick={handleClick}>Click me</button>
+      <button
+        onClick={() => {
+          alert("I am params");
+        }}
+      >
+        Click param
+      </button>
+    </div>
+  );
+};
 
-export default Event
+export default EventHandling;
