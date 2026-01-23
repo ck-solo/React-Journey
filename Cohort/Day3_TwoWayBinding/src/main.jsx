@@ -5,6 +5,7 @@ import Map from './Map.jsx'
 import Change from './Change.jsx'
 import Form from './Form.jsx'
 import Registration from './Registration.jsx'
+import UseStateConcept from './UseStateConcept.jsx'
 
 createRoot(document.getElementById('root')).render(
   <>
@@ -25,6 +26,8 @@ createRoot(document.getElementById('root')).render(
 
     {/* ----------------------------- */}
 
-    <Registration />
+    {/* <Registration /> */}
+
+    <UseStateConcept />
   </>,
 )
